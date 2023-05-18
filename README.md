@@ -21,11 +21,10 @@ This is a Node.js script that uses multiple worker processes to generate random 
 3. The script will display the loop count for each worker process in real-time.
 4. If a match is found, the wallet address and its private key will be saved to a file named `match.txt` and the script will exit.
 
-
-
 >Support my work:<br>
 >BTC: bc1q7wth254atug2p4v9j3krk9kauc0ehys2u8tgg3<br>
->ETH: 0x68B6D33Ad1A3e0aFaDA60d6ADf8594601BE492F0<br>
+>ETH & BNB: 0x68B6D33Ad1A3e0aFaDA60d6ADf8594601BE492F0<br>
+>Buy me a coffee: https://www.buymeacoffee.com/CorvusCodex
 
 ## Disclaimer
 
