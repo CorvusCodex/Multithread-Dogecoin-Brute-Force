@@ -69,14 +69,36 @@ if (cluster.isMaster) {
     });
 
     let boxes = []; 
+    let infoBox = blessed.box({
+        top: '0%',
+        left: 0,
+        width: '100%',
+        height: '30%',
+        content: `//Created by: Corvus Codex
+//Github: https://github.com/CorvusCodex/
+//Licence : MIT License
+//Support my work:
+//BTC: bc1q7wth254atug2p4v9j3krk9kauc0ehys2u8tgg3
+//ETH & BNB: 0x68B6D33Ad1A3e0aFaDA60d6ADf8594601BE492F0
+//Buy me a coffee: https://www.buymeacoffee.com/CorvusCodex`,
+        border: {
+          type: 'line'
+        },
+        style: {
+          fg: 'green',
+          border: {
+            fg: 'green'
+          }
+        }
+      });
 
-    for (let i = 0; i < numCPUs; i++) { 
-        let box = blessed.box({ 
-            top: `${i * 100/numCPUs}%`, 
-            left: 0,
-            width: '50%',
-            height: `${100/numCPUs}%`,
-            content: `Worker ${i+1} Keys generated: 0 Speed: 0 keys/min`, 
+      for (let i = 0; i < numCPUs; i++) {
+        let box = blessed.box({
+            top: `${30 + i * 50/numCPUs}%`,
+    left: 0,
+    width: '100%',
+    height: `${40/numCPUs}%`,
+    content: `Worker ${i+1} Keys generated: 0 Speed: 0 keys/min`,
             border: {
                 type: 'line'
             },
@@ -87,28 +109,12 @@ if (cluster.isMaster) {
                 }
             }
         });
+        screen.append(infoBox);
         screen.append(box); 
         boxes.push(box); 
     
     }
 
-    let recentKeysBox = blessed.box({ 
-        top: 0,
-        left: '50%',
-        width: '50%',
-        height: '100%',
-        content: `Recent 10 keys sample (updated every minute):\n`, 
-        border: {
-            type: 'line'
-        },
-        style: {
-            fg: 'green',
-            border: {
-                fg: 'green'
-            }
-        }
-    });
-    screen.append(recentKeysBox); 
 
     screen.render(); 
 
@@ -121,14 +127,7 @@ if (cluster.isMaster) {
             }
             screen.render(); 
         }
-        if (message.recentKeys) { 
-            let content = `Recent keys:\n`; 
-            message.recentKeys.forEach(key => { 
-                                content += `Address: ${key.address} Private key:${key.privateKey}\n`;
-            });
-            recentKeysBox.setContent(content);
-            screen.render();
-        }
+        
     });
 
     // Fork workers.
