@@ -14,6 +14,9 @@ This is a Node.js script that uses multiple worker processes to generate random 
 2. Open a terminal or command prompt and navigate to the directory where the code is located.
 3. Run `npm install` to install the required dependencies.
 
+## For people without technical experience you can buy the compiled application for windows from here:
+https://www.buymeacoffee.com/CorvusCodex/e/165431
+
 ## Usage
 
 1. Add the Dogecoin addresses you want to check against to a file named `data.txt`, with one address per line.
