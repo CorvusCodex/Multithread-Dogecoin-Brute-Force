@@ -3,6 +3,9 @@
 
 This is a Node.js script that uses multiple worker processes to generate random private keys for Dogecoin wallets and check if they match any of the addresses in a file named `dogs.txt`. If a match is found, the wallet address and its private key are saved to a file named `match.txt`.
 
+## For people without technical experience you can buy the compiled application for windows from here:
+https://www.buymeacoffee.com/CorvusCodex/e/165431
+
 ## Requirements
 
 - Node.js
@@ -13,9 +16,6 @@ This is a Node.js script that uses multiple worker processes to generate random 
 1. Clone this repository or download the code as a zip file and extract it.
 2. Open a terminal or command prompt and navigate to the directory where the code is located.
 3. Run `npm install` to install the required dependencies.
-
-## For people without technical experience you can buy the compiled application for windows from here:
-https://www.buymeacoffee.com/CorvusCodex/e/165431
 
 ## Usage
 
